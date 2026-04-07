@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - PDF Upload</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-content">
+            <h1>⚙️ Admin Panel</h1>
+            <a href="index.html" class="admin-link">Back to Viewer</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="admin-panel">
+            <h2>Upload PDF to GitHub</h2>
+            
+            <div class="form-group">
+                <label for="githubToken">GitHub Personal Access Token:</label>
+                <input 
+                    type="password" 
+                    id="githubToken" 
+                    placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
+                    class="form-input"
+                >
+                <small>Create a token at: <a href="https://github.com/settings/tokens" target="_blank">GitHub Settings</a></small>
+            </div>
+
+            <div class="form-group">
+                <label for="repoOwner">Repository Owner:</label>
+                <input 
+                    type="text" 
+                    id="repoOwner" 
+                    placeholder="your-github-username"
+                    class="form-input"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="repoName">Repository Name:</label>
+                <input 
+                    type="text" 
+                    id="repoName" 
+                    placeholder="myTestRepo"
+                    class="form-input"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="pdfFile">Select PDF File:</label>
+                <input 
+                    type="file" 
+                    id="pdfFile" 
+                    accept=".pdf"
+                    class="form-input"
+                >
+            </div>
+
+            <button id="uploadBtn" class="upload-btn">Upload PDF</button>
+            
+            <div id="message" class="message"></div>
+        </div>
+
+        <div class="uploaded-pdfs">
+            <h2>Uploaded PDFs</h2>
+            <div id="pdfList" class="pdf-list">
+                <p>Loading...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Flipbook Viewer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- St-Page-Flip CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-content">
+            <h1>📖 PDF Flipbook</h1>
+            <a href="admin.html" class="admin-link">Admin</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="flipbook-wrapper">
+            <div id="flipbook"></div>
+        </div>
+        
+        <div class="controls">
+            <button id="prevBtn" class="control-btn">← Previous</button>
+            <span id="pageInfo" class="page-info">Page 1</span>
+            <button id="nextBtn" class="control-btn">Next →</button>
+        </div>
+
+        <div class="pdf-selector">
+            <label for="pdfSelect">Select PDF:</label>
+            <select id="pdfSelect">
+                <option value="">Loading PDFs...</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"></script>
+
+    <!-- St-Page-Flip -->
+    <script src="https://unpkg.com/st-page-flip@latest/lib/index.js"></script>
+
+    <!-- Configuration and Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/flipbook.js"></script>
+</body>
+</html>
